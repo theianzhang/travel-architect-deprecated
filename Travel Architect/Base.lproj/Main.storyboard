@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <outlet property="coordinatesLabel" destination="cuH-68-6xF" id="uCE-AF-JWB"/>
+                        <outlet property="showStructures" destination="TTs-R5-niG" id="Dp9-wL-sqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,0 +1,6 @@
+framework module Pods_Travel_Architect {
+  umbrella header "Pods-Travel Architect-umbrella.h"
+
+  export *
+  module * { export * }
+}
