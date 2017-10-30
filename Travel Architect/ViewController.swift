@@ -39,7 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate
             locationManager.startUpdatingLocation()
         }
         
-        getCoordinates()
+        locationManager.location?.coordinate
 
     }
 
@@ -48,26 +48,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func getCoordinates()
-    {
-        
-    }
-    
     func findStructures()
     {
-                Alamofire.request("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=Seattle&exintro=1").responseJSON { response in
-                    print("Request: \(String(describing: response.request))")   // original url request
-                    print("Response: \(String(describing: response.response))") // http url response
-                    print("Result: \(response.result)")                         // response serialization result
-        
-                    if let json = response.result.value {
-                        print("JSON: \(json)") // serialized json response
-                    }
-        
-                    if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                        print("Data: \(utf8Text)") // original server data as UTF8 string
-                    }
-                }
+        Alamofire.request("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=Seattle&exintro=1").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
     }
     
     func getImages() -> Void
@@ -81,13 +76,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
-    // Print out the location to the console
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print(location.coordinate)
-        }
-    }
-    
     // If we have been deined access give the user the option to change it
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if(status == CLAuthorizationStatus.denied) {
@@ -98,7 +86,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate
     // Show the popup to the user if we have been deined access
     func showLocationDisabledPopUp() {
         let alertController = UIAlertController(title: "Background Location Access Disabled",
-                                                message: "In order to deliver pizza we need your location",
+                                                message: "Travel Architect works based on your location! Open Settings to grant this access.",
                                                 preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
