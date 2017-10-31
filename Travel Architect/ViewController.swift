@@ -39,8 +39,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate
             locationManager.startUpdatingLocation()
         }
         
-        locationManager.location?.coordinate
-
+        let latitude = locationManager.location?.coordinate.latitude ?? 37.6060
+        let longitude = locationManager.location?.coordinate.longitude ?? -122.055
+        
+        findStructures(latitude: latitude, longitude: longitude)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,12 +50,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func findStructures()
+    func findStructures(latitude: Double, longitude: Double)
     {
-        Alamofire.request("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=Seattle&exintro=1").responseJSON { response in
+        //print(latitude, longitude)
+        
+        let parameters: Parameters =
+        [
+            "action": "query",
+            "list": "geosearch",
+            "gsradius": "100",
+            "gscoord":  "51.515419|-0.141099",
+            "format": "json"
+        ]
+        
+        Alamofire.request("https://en.wikipedia.org/w/api.php", parameters: parameters).responseJSON
+            { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
+            print("Result: \(String(describing: response.result))")     // response serialization result
+            print("Error: \(String(describing: response.error))")       // response errors if any
 
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
@@ -109,4 +124,3 @@ class ViewController: UIViewController, CLLocationManagerDelegate
     }
 
 }
-
