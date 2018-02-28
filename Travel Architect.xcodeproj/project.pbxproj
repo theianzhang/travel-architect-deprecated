@@ -14,10 +14,13 @@
 		EB7398461F8DDEAD0003B60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7398451F8DDEAD0003B60D /* ViewController.swift */; };
 		EB7398491F8DDEAD0003B60D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7398471F8DDEAD0003B60D /* Main.storyboard */; };
 		EB73984C1F8DDEAD0003B60D /* Travel_Architect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB73984A1F8DDEAD0003B60D /* Travel_Architect.xcdatamodeld */; };
-		EB73984E1F8DDEAD0003B60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB73984D1F8DDEAD0003B60D /* Assets.xcassets */; };
 		EB7398511F8DDEAD0003B60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB73984F1F8DDEAD0003B60D /* LaunchScreen.storyboard */; };
 		EB73985C1F8DDEAD0003B60D /* Travel_ArchitectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73985B1F8DDEAD0003B60D /* Travel_ArchitectTests.swift */; };
 		EB7398671F8DDEAD0003B60D /* Travel_ArchitectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7398661F8DDEAD0003B60D /* Travel_ArchitectUITests.swift */; };
+		EB85A7F12043AB4800ACECE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB85A7F02043AB4800ACECE1 /* Assets.xcassets */; };
+		EB85A7F32043ABB700ACECE1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85A7F22043ABB700ACECE1 /* APIClient.swift */; };
+		EB85A7F52043AC0200ACECE1 /* LocationManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85A7F42043AC0200ACECE1 /* LocationManagement.swift */; };
+		EBF7DAB520423E2200ED324D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7DAB420423E2200ED324D /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,6 @@
 		EB7398451F8DDEAD0003B60D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB7398481F8DDEAD0003B60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB73984B1F8DDEAD0003B60D /* Travel_Architect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Travel_Architect.xcdatamodel; sourceTree = "<group>"; };
-		EB73984D1F8DDEAD0003B60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB7398501F8DDEAD0003B60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB7398521F8DDEAD0003B60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7398571F8DDEAD0003B60D /* Travel ArchitectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel ArchitectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,10 @@
 		EB7398621F8DDEAD0003B60D /* Travel ArchitectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel ArchitectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7398661F8DDEAD0003B60D /* Travel_ArchitectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ArchitectUITests.swift; sourceTree = "<group>"; };
 		EB7398681F8DDEAD0003B60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB85A7F02043AB4800ACECE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		EB85A7F22043ABB700ACECE1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		EB85A7F42043AC0200ACECE1 /* LocationManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagement.swift; sourceTree = "<group>"; };
+		EBF7DAB420423E2200ED324D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +147,11 @@
 			children = (
 				EB7398431F8DDEAD0003B60D /* AppDelegate.swift */,
 				EB7398451F8DDEAD0003B60D /* ViewController.swift */,
+				EB85A7F22043ABB700ACECE1 /* APIClient.swift */,
+				EB85A7F42043AC0200ACECE1 /* LocationManagement.swift */,
+				EBF7DAB420423E2200ED324D /* CollectionViewCell.swift */,
 				EB7398471F8DDEAD0003B60D /* Main.storyboard */,
-				EB73984D1F8DDEAD0003B60D /* Assets.xcassets */,
+				EB85A7F02043AB4800ACECE1 /* Assets.xcassets */,
 				EB73984F1F8DDEAD0003B60D /* LaunchScreen.storyboard */,
 				EB7398521F8DDEAD0003B60D /* Info.plist */,
 				EB73984A1F8DDEAD0003B60D /* Travel_Architect.xcdatamodeld */,
@@ -285,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7398511F8DDEAD0003B60D /* LaunchScreen.storyboard in Resources */,
-				EB73984E1F8DDEAD0003B60D /* Assets.xcassets in Resources */,
+				EB85A7F12043AB4800ACECE1 /* Assets.xcassets in Resources */,
 				EB7398491F8DDEAD0003B60D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,11 +340,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Travel Architect/Pods-Travel Architect-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,7 +475,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7398461F8DDEAD0003B60D /* ViewController.swift in Sources */,
+				EB85A7F52043AC0200ACECE1 /* LocationManagement.swift in Sources */,
 				EB7398441F8DDEAD0003B60D /* AppDelegate.swift in Sources */,
+				EBF7DAB520423E2200ED324D /* CollectionViewCell.swift in Sources */,
+				EB85A7F32043ABB700ACECE1 /* APIClient.swift in Sources */,
 				EB73984C1F8DDEAD0003B60D /* Travel_Architect.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
